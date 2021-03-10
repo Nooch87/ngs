@@ -1,6 +1,12 @@
-const theOneFunc = () => {};
+const theOneFunc = (multiplier, after) => {
+    console.log(`Hello after ${multiplier * 4} seconds`)
 
-setTimeout(theOneFunc, 4 * 1000);
+    if (after){
+        setTimeout (theOneFunc, 4 * 1000 * after, 2);
+    }
+};
+
+setTimeout(theOneFunc, 4 * 1000, 1, 2);
 
 // Hello after 4 seconds
 
